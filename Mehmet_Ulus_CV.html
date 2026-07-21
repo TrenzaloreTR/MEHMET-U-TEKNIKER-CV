@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehmet Ulus - Özgeçmiş</title>
+    <style>
+        :root {
+            --primary-color: #001340; /* Nişantaşı Laciverti */
+            --secondary-color: #ffcc00; /* Nişantaşı Sarısı */
+            --text-color: #333;
+            --bg-color: #faf8f5;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .cv-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--white);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 40px 30px;
+            border-bottom: 5px solid var(--secondary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .profile-photo {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--secondary-color);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .header-content {
+            text-align: center;
+            flex: 1;
+            min-width: 300px;
+        }
+
+            .header-content h1 {
+                font-size: 2.5em;
+                margin-bottom: 10px;
+                letter-spacing: 1px;
+            }
+
+            .header-content p {
+                font-size: 1.1em;
+                color: #d1d9e6;
+            }
+
+        .contact-info {
+            margin-top: 15px;
+            font-size: 0.95em;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+            .contact-info span {
+                display: flex;
+                align-items: center;
+            }
+
+            .contact-info a {
+                color: var(--white);
+                text-decoration: none;
+                transition: color 0.2s;
+            }
+
+                .contact-info a:hover {
+                    color: var(--secondary-color);
+                }
+
+        .section {
+            padding: 30px;
+            border-bottom: 1px solid #eee;
+        }
+
+            .section:last-child {
+                border-bottom: none;
+            }
+
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+            .section-title::after {
+                content: "";
+                flex: 1;
+                height: 2px;
+                background: var(--secondary-color);
+                margin-left: 15px;
+            }
+
+        .item {
+            margin-bottom: 20px;
+        }
+
+            .item h3 {
+                color: #222;
+                font-size: 1.2em;
+                margin-bottom: 5px;
+            }
+
+            .item .meta {
+                font-style: normal;
+                color: #000000;
+                font-size: 1.05em;
+                font-weight: 500;
+                margin-bottom: 10px;
+            }
+
+            .item ul {
+                list-style-type: disc;
+                margin-left: 20px;
+            }
+
+                .item ul li {
+                    margin-bottom: 5px;
+                }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-box {
+            background: #f4f6f9;
+            padding: 15px;
+            border-left: 4px solid var(--primary-color);
+            border-radius: 4px;
+        }
+
+            .skill-box h4 {
+                margin-bottom: 8px;
+                color: var(--primary-color);
+            }
+
+        .portfolio-section {
+            background: #fcfcfc;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .photo-card {
+            background: var(--white);
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+            .photo-card img {
+                width: 100%;
+                height: 320px;
+                object-fit: cover;
+                background: #222;
+                border-radius: 4px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+            }
+
+            .photo-card textarea {
+                width: 100%;
+                height: 150px;
+                padding: 12px;
+                border: 1px solid #e0e0e0;
+                border-radius: 4px;
+                resize: none;
+                font-family: inherit;
+                font-size: 0.8em;
+                background-color: #f8f9fa;
+                color: #444;
+                line-height: 1.4;
+                cursor: default;
+            }
+
+                .photo-card textarea:focus {
+                    outline: none;
+                }
+
+        @media (max-width: 768px) {
+            .photo-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .photo-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .cv-container {
+                box-shadow: none;
+                border: none;
+            }
+
+            .photo-grid {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cv-container">
+        <header>
+            <img src="MEHMET U CV Profil Fotograf_cleaned.png" alt="Mehmet Ulus Profil Fotoğrafı" class="profile-photo">
+
+            <div class="header-content">
+                <h1>Mehmet ULUS</h1>
+                <p>Bilgisayar ve Elektronik Teknikeri</p>
+                <p>Mobil Teknolojileri Geliştiricisi</p>
+                <p>Profesyonel Fotoğrafçı</p>
+                <div class="contact-info">
+                    <span>📞 0555 065 35 24</span>
+                    <span>✉️ <a href="mailto:mehmetulusiletisim@gmail.com">mehmetulusiletisim@gmail.com</a></span>
+                    <span>
+                        🔗 <a href="https://www.linkedin.com/in/mehmet-ulus-553278171/" target="_blank">
+                            LİNKEDİN HESABIM:
+                            www.linkedin.com/in/mehmet-ulus-553278171/
+                        </a>
+                    </span>
+                    <span>
+                        📸 <a href="https://instagram.com/nikonistmemo" target="_blank">
+                            İNSTAGRAM HESABIM
+                            instagram.com/nikonistmemo
+                        </a>
+                    </span>
+                    <span>
+                        📸 <a href="https://www.instagram.com/nevfotografcilik?igsh=NXU5bTA2d3N4eXBj" target="_blank">
+                            İNSTAGRAM HESABIM
+                            instagram.com/nevfotografcilik
+                        </a>
+                    </span>
+                    <span>
+                        📸 <a href="https://maps.app.goo.gl/JpLRgYRzBf5V7mi5A" target="_blank">
+                            ADRES
+                            KÜÇÜKÇEKMECE - İSTANBUL
+                        </a>
+                    </span>
+                    <span>📍 Küçükçekmece, İstanbul</span>
+                    <span>🎂 25.02.2001</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="section">
+            <h2 class="section-title">Kariyer Hedefi</h2>
+            <p>
+                Mobil teknolojiler, front-end web geliştirme ve profesyonel medya üretimi (fotoğraf/video) alanlarındaki yetkinliklerimi birleştirerek yenilikçi projeler üretmek.
+                Teknik altyapı kurulumundan (ses, ışık, reji) - yazılım geliştirmeye kadar uçtan uca dijital çözümler sunmak ve kurumsal iletişim/medya alanında uzmanlaşmak.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Eğitim Bilgileri</h2>
+            <div class="item">
+                <h3>İstanbul Nişantaşı Üniversitesi</h3>
+                <p class="meta">Mobil Teknolojiler Programı | İlk Mezun Grubu | Mezuniyet Tarihi: 17 Temmuz 2026</p>
+                <ul>
+                    <li>Öğrenci Kalite Temsilcisi.</li>
+                    <li>Gençlik ve Spor Bakanlığı Öğrenci Temsilcisi.</li>
+                    <li>Fotoğrafçılık Kulübü Kurucu Başkanlığı.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Projeler</h2>
+
+            <div class="item">
+                <h3>Kampüs İçi Videolu Yol Tarifi Projesi (Kağıthane Kampüsü & NEV DENT)</h3>
+                <p class="meta">Geliştirici & Proje Yöneticisi | 2026</p>
+                <ul>
+                    <li>Öğrenci ve ziyaretçilerin Kağıthane Kampüsü ile NEV DENT Diş Hastanesi içindeki sınıflara, laboratuvarlara ve idari birimlere kolayca ulaşmasını sağlayan <strong>mobil öncelikli (mobile-first)</strong> web uygulamasının geliştirilmesi.</li>
+                    <li>Projenin iskeletinde <strong>HTML5</strong>, tasarımında <strong>CSS3</strong> ve işlevsel algoritmalarında (filtreleme, dinamik arama) <strong>JavaScript</strong> kullanılması.</li>
+                    <li>Kaynak kodların ve versiyon kontrolünün <strong>GitHub</strong> üzerinden yönetilerek projenin açık kaynak olarak yayınlanması.</li>
+                    <li>Projenin <strong>Netlify</strong> üzerinden canlıya (deployment) alınarak kullanıma sunulması.</li>
+                    <li>Tüm idari birimler ve laboratuvarlar için video çekimlerinin yapılıp sisteme YouTube altyapısı ile entegre edilmesi.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <h3>Etkinlik Medya ve Teknik Yönetimi (Nadmex Çalıştayı & Üniversite Etkinlikleri)</h3>
+                <p class="meta">Teknik Sorumlu & Fotoğrafçı | 2026</p>
+                <ul>
+                    <li>Arama kurtarma kulüpleri ve sivil toplum kuruluşları çalıştaylarında sahne, reji, ışık, ses ve mikser yönetiminin tek başına üstlenilmesi.</li>
+                    <li>Üniversitenin etkinliklerinde Kurumsal İletişim Ekiplerinin sahada bulunmadığı anlarda inisiyatif alarak profesyonel kamera (Nikon D3300 + D5100) ile fotoğraf ve video çekimlerinin yapılması.</li>
+                    <li>Kulüp etkinlikleri ve üniversite organizasyonları için görsel materyallerin çekilmesi, düzenlenmesi ve bulut sistemleri üzerinden raporlanması.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <h3>Staj ve Gelişim Süreci</h3>
+                <p class="meta">Stajyer | 21 Ağustos 2026'ya kadar</p>
+                <ul>
+                    <li>Sektörel tecrübe kazanmak amacıyla zorunlu staj programının tamamlanması.</li>
+                    <li>Kurumsal iletişim ve medya ajanslarında görev almak üzere hazırlık süreçlerinin (portfolyo ve özgeçmiş oluşturma) yürütülmesi.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Teknik Yetkinlikler ve Beceriler</h2>
+            <div class="skills-grid">
+                <div class="skill-box">
+                    <h4>Medya & Canlı Yayın Prodüksiyonu</h4>
+                    <p>Nikon D3300/D5100, Zhiyun Gimbal, taşınabilir monitör ile canlı focus pulling, HDMI capture ile canlı yayın (streaming) altyapısı kurma, Reji.</p>
+                </div>
+                <div class="skill-box">
+                    <h4>Ses & Işık Teknikerliği</h4>
+                    <p>Sahne ses ve ışık mikserleri yönetimi, yankı (echo) ve akustik optimizasyonu, mikrofon-hoparlör mesafe ve frekans ayarları.</p>
+                </div>
+                <div class="skill-box">
+                    <h4>Donanım & Kriz Yönetimi</h4>
+                    <p>Elektronik bakım-onarım, etkinlik esnasında oluşabilecek donanım arızalarına anlık müdahale, Amatör Telsizcilik (TA1TRC), Röle Kurulumu.</p>
+                </div>
+                <div class="skill-box">
+                    <h4>İletişim & Organizasyon</h4>
+                    <p>Yüksek stresli saha ortamlarında çözüm odaklılık; fiziksel, teknik ve operasyonel krizleri yapıcı ve pozitif bir yaklaşımla çözüme kavuşturma.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section portfolio-section">
+            <h2 class="section-title">Portfolyo & Çalışmalarım</h2>
+            <p style="color: #555; margin-bottom: 15px;">
+                Fotoğrafçılık Kulübü Kurucu Başkanı olarak yapılan çekimler ve teknik altyapı yönetimleri.
+            </p>
+
+            <div class="photo-grid">
+
+                <!-- Mikser 1 -->
+                <div class="photo-card">
+                    <img src="20241030_153616(1)_cleaned.jpg" alt="Stüdyo/Reji Masası">
+                    <textarea id="photoDesc2" readonly>Nadmex Afet Yönetimi Çalıştayı boyunca stüdyo teknik akışı ve ses sistemleri yönetimi.</textarea>
+                </div>
+
+                <!-- Kulüp Başkanı Stant -->
+                <div class="photo-card">
+                    <img src="341678c4-3e9d-47b8-974b-109a0203d685~1_cleaned.jpg" alt="Fotoğrafçılık Kulübü Başkanı">
+                    <textarea id="photoDesc3" readonly>Nevfest 24 zirvesi çekimleri ve organizasyon yönetimi.</textarea>
+                </div>
+
+                <!-- Konferans Salonu POV -->
+                <div class="photo-card">
+                    <img src="770e2293-263b-42d9-8274-53f3d7972754~1_cleaned.jpg" alt="Etkinlik Çekimi">
+                    <textarea id="photoDesc4" readonly>Yetersiz ışık koşullarında profesyonel ışık ekipmanlarıyla gerçekleştirilen çekim yönetimi.</textarea>
+                </div>
+
+                <!-- Aviation Summit -->
+                <div class="photo-card">
+                    <img src="b36deff9-0f1f-4a84-a3fd-7df1f8f758c2~1_cleaned.jpg" alt="Aviation Summit Etkinliği">
+                    <textarea id="photoDesc5" readonly>Aviation Summit'25 etkinliğinde saha ekibi koordinasyonu ve görsel belgeleme.</textarea>
+                </div>
+
+                <!-- Sony Etkinliği -->
+                <div class="photo-card">
+                    <img src="IMG_5912_cleaned.JPG" alt="Ekipman Deneyimi">
+                    <textarea id="photoDesc7" readonly>Bursa Tanıtım Günleri'nde yeni nesil profesyonel prodüksiyon donanımlarının deneyimlenmesi.</textarea>
+                </div>
+
+                <!-- Yerebatan Sarnıcı 1 -->
+                <div class="photo-card">
+                    <img src="IMG_1685_cleaned.JPG" alt="Yerebatan Sarnıcı Çekimi">
+                    <textarea id="photoDesc8" readonly>Yerebatan Sarnıcı'nın zorlu ışık şartlarında uzun pozlama ve portre çekimleri.</textarea>
+                </div>
+
+                <!-- Yeni Eklenenler -->
+                <!-- Etkinlik Çekimi (IMG_9072) -->
+                <div class="photo-card">
+                    <img src="IMG_9072_cleaned.PNG" alt="Saha Etkinliği Çekimi">
+                    <textarea id="photoDesc10" readonly>Saha etkinliklerinde profesyonel flaş kullanımı ile gerçekleştirilen dinamik fotoğraf çekimleri.</textarea>
+                </div>
+
+                <!-- Etkinlik Çekimi (1b7680f1-017e) -->
+                <div class="photo-card">
+                    <img src="1b7680f1-017e-4c2e-a6ba-a005785dc543~1_cleaned.jpg" alt="Etkinlik Çekimi Alternatif Açı">
+                    <textarea id="photoDesc11" readonly>Canlı etkinliklerde ve organizasyonlarda flaşlı kamera sistemleriyle alan hakimiyeti ve anlık yakalamalar.</textarea>
+                </div>
+
+                <!-- Reji Masası Kendinden Çekim (d86708f7) -->
+                <div class="photo-card">
+                    <img src="d86708f7-5734-4930-9aa2-9e43ad872a5e~1_cleaned.jpg" alt="Reji Masası Yönetimi">
+                    <textarea id="photoDesc12" readonly>Canlı yayın ve konferans etkinlikleri sırasında ses mikseri ve stüdyo reji yönetimini tek başına koordine ederken.</textarea>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
