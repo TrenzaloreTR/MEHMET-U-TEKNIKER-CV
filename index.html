@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
@@ -132,6 +132,14 @@
                 font-size: 1.2em;
                 margin-bottom: 5px;
             }
+            
+            .item h4 {
+                color: var(--primary-color);
+                font-size: 1.1em;
+                margin-bottom: 10px;
+                border-bottom: 1px solid #eee;
+                padding-bottom: 5px;
+            }
 
             .item .meta {
                 font-style: normal;
@@ -154,6 +162,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 15px;
+            margin-bottom: 20px;
         }
 
         .skill-box {
@@ -166,7 +175,26 @@
             .skill-box h4 {
                 margin-bottom: 8px;
                 color: var(--primary-color);
+                border: none;
+                padding: 0;
             }
+            
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .skill-tag {
+            background-color: #f4f6f9;
+            border: 1px solid #d1d9e6;
+            color: var(--primary-color);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.95em;
+            font-weight: 500;
+        }
 
         .portfolio-section {
             background: #fcfcfc;
@@ -261,15 +289,13 @@
             <div class="header-content">
                 <h1>MEHMET ULUS</h1>
                 <p>Bilgisayar ve Elektronik Teknikeri</p>
-                <p>Mobil Teknolojileri Teknikeri</p>
                 <p>Profesyonel Fotoğrafçı</p>
-
+                <p>Mobil Teknolojileri Teknikeri</p>
                 <div class="contact-info">
                     <span>📞 +90 555 065 3524</span>
                     <span>🔗 <a href="https://www.linkedin.com/in/mehmet-ulus-553278171/" target="_blank">LinkedIn Hesabım: linkedin.com/in/mehmet-ulus-553278171</a></span>
                     <span>📸 <a href="https://instagram.com/nikonistmemo" target="_blank">Profesyonel Fotoğrafçılık - instagram.com/nikonistmemo</a></span>
                     <span>📸 <a href="https://www.instagram.com/nevfotografcilik?igsh=NXU5bTA2d3N4eXBj" target="_blank">Fotoğrafçılık Kulübüm - instagram.com/nevfotografcilik</a></span>
-
                     <span style="width: 100%; display: flex; justify-content: center;">📍 <a href="https://maps.app.goo.gl/JpLRgYRzBf5V7mi5A" target="_blank">Adres: Küçükçekmece - İstanbul</a></span>
                 </div>
             </div>
@@ -279,7 +305,7 @@
             <h2 class="section-title">Kariyer Hedefi</h2>
             <ul style="list-style-type: none; margin-left: 0; font-size: 1.05em; color: #444;">
                 <li style="margin-bottom: 8px;">✔️ Mobil teknolojiler, front-end web geliştirme.</li>
-                <li style="margin-bottom: 8px;">✔️ Profesyonel medya üretimi (fotoğraf/video) alanlarında disiplinlerarası bir yetkinliğe sahibim..</li>
+                <li style="margin-bottom: 8px;">✔️ Profesyonel medya üretimi (fotoğraf/video) alanlarında disiplinlerarası bir yetkinliğe sahibim.</li>
                 <li style="margin-bottom: 8px;">✔️ Ses, ışık ve reji altyapı kurulumlarından yazılım geliştirmeye uzanan süreçte uçtan uca dijital çözümler sunuyorum.</li>
                 <li style="margin-bottom: 8px;">✔️ Hedefim; teknik ve görsel birikimimi kurumsal iletişim ve medya alanında uzmanlaşarak yenilikçi projelere dönüştürmektir.</li>
             </ul>
@@ -296,12 +322,12 @@
                     <li>Bölüm 3.sü oldum ✅</li>
                     <li>Öğrenci Kalite Temsilcisi oldum ve görevlerimi yaptım.</li>
                     <li>Gençlik ve Spor Bakanlığı Öğrenci Temsilcisi oldum ve görevlerimi yaptım.</li>
-                    <li>2024 Ocak'tan itibaren 'Fotoğrafçılık Kulübü Kurucu Başkanlığı yaptım ve devam ediyorum.</li>
+                    <li>2024 Ocak'tan itibaren Fotoğrafçılık Kulübü Kurucu Başkanlığı yaptım ve devam ediyorum.</li>
                 </ul>
             </div>
 
             <div class="item">
-                <h3>- Elektrik - Nişantaşı Üniversitesi - </h3>
+                <h3>- Elektrik - Nişantaşı Üniversitesi</h3>
                 <p class="meta">Ön Lisans | Örgün Öğretim, Türkçe | Eylül 2022 - Ekim 2024 ✅</p>
                 <ul>
                     <li>2022-2024 yılları arasında okudum.</li>
@@ -314,7 +340,6 @@
                 <p class="meta">Ön Lisans | Örgün Öğretim, Türkçe | Ekim 2019 - Eylül 2022 ✅</p>
                 <ul>
                     <li>2019-2020 eğitim döneminde isteğe bağlı olarak, B1 seviyesine kadar İngilizce Hazırlık eğitimi aldım. ✅</li>
-                    <li>2020-2022 yılları arasında okudum. ✅</li>
                     <li>2022 Eylül'de mezun oldum.</li>
                 </ul>
             </div>
@@ -322,7 +347,6 @@
             <div class="item">
                 <h3>Bilişim Teknolojileri - Bilgisayar Teknik Servisi - Abdurrahman ve Nermin BİLİMLİ M.T.A.L.</h3>
                 <p class="meta">Bilişim Teknolojileri - Bilgisayar Teknik Servisi ✅</p>
-
                 <p class="meta">Eylül 2015 - Haziran 2019</p>
                 <ul>
                     <li>Diploma Notu: 62.20 / 100</li>
@@ -410,34 +434,105 @@
 
         <div class="section">
             <h2 class="section-title">Teknik Yetkinlikler ve Beceriler</h2>
-            <div class="skills-grid">
-                <div class="skill-box">
-                    <h4>Medya & Canlı Yayın Prodüksiyonu</h4>
-                    <p>Nikon D3300/D5100, Zhiyun Gimbal, taşınabilir monitör ile canlı focus pulling, HDMI capture ile canlı yayın (streaming) altyapısı kurma, Reji.</p>
+            
+            <div class="item">
+                <h4>Teknik Yetkinlikler</h4>
+                <div class="skills-grid">
+                    <div class="skill-box">
+                        <h4 style="border:none; margin-bottom: 8px;">Medya & Canlı Yayın Prodüksiyonu</h4>
+                        <p>Nikon D3300/D5100, Zhiyun Gimbal, taşınabilir monitör ile canlı focus pulling, HDMI capture ile canlı yayın (streaming) altyapısı kurma, Reji.</p>
+                    </div>
+                    <div class="skill-box">
+                        <h4 style="border:none; margin-bottom: 8px;">Ses & Işık Teknikerliği</h4>
+                        <p>Sahne ses ve ışık mikserleri yönetimi, yankı (echo) ve akustik optimizasyonu, mikrofon-hoparlör mesafe ve frekans ayarları.</p>
+                    </div>
+                    <div class="skill-box">
+                        <h4 style="border:none; margin-bottom: 8px;">Donanım & Kriz Yönetimi</h4>
+                        <p>Elektronik bakım-onarım, etkinlik esnasında oluşabilecek donanım arızalarına anlık müdahale, Amatör Telsizcilik (TA1TRC), Röle Kurulumu.</p>
+                    </div>
+                    <div class="skill-box">
+                        <h4 style="border:none; margin-bottom: 8px;">İletişim & Organizasyon</h4>
+                        <p>Yüksek stresli saha ortamlarında çözüm odaklılık; fiziksel, teknik ve operasyonel krizleri yapıcı ve pozitif bir yaklaşımla çözüme kavuşturma.</p>
+                    </div>
                 </div>
-                <div class="skill-box">
-                    <h4>Ses & Işık Teknikerliği</h4>
-                    <p>Sahne ses ve ışık mikserleri yönetimi, yankı (echo) ve akustik optimizasyonu, mikrofon-hoparlör mesafe ve frekans ayarları.</p>
+            </div>
+
+            <div class="item">
+                <h4>Beceriler</h4>
+                <div class="skill-tags">
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">C#</span>
+                    <span class="skill-tag">Moda ve Ürün Fotoğrafçılığı</span>
+                    <span class="skill-tag">Fotoğrafçılık</span>
+                    <span class="skill-tag">Video Çekimi</span>
+                    <span class="skill-tag">Elektrik / Elektronik</span>
+                    <span class="skill-tag">Lehimleme</span>
+                    <span class="skill-tag">Bilgisayar Teknik Servis</span>
+                    <span class="skill-tag">Bilgisayar Donanımları (İleri Seviye)</span>
+                    <span class="skill-tag">Bilgisayar Operatörü</span>
+                    <span class="skill-tag">Mobil Teknoloji</span>
+                    <span class="skill-tag">Video Kameralar</span>
                 </div>
-                <div class="skill-box">
-                    <h4>Donanım & Kriz Yönetimi</h4>
-                    <p>Elektronik bakım-onarım, etkinlik esnasında oluşabilecek donanım arızalarına anlık müdahale, Amatör Telsizcilik (TA1TRC), Röle Kurulumu.</p>
-                </div>
-                <div class="skill-box">
-                    <h4>İletişim & Organizasyon</h4>
-                    <p>Yüksek stresli saha ortamlarında çözüm odaklılık; fiziksel, teknik ve operasyonel krizleri yapıcı ve pozitif bir yaklaşımla çözüme kavuşturma.</p>
-                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Kurs / Sertifika Bilgileri</h2>
+
+            <div class="item">
+                <h3>Bilgisayar Teknik Servis Eğitimi ✅</h3>
+                <p class="meta">Fatih Sultan Mehmet Vakıf Üniversitesi - İstanbul | (Sertifika tarihi: 03/2023)</p>
+                <ul>
+                    <li>Earth Akademi Akreditasyon'u kapsamında, 120 saatlik eğitimi başarıyla tamamlayarak kazanılan sertifika.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <h3>Bilgisayar Teknik Servis Eğitimi ✅</h3>
+                <p class="meta">ICC W - İstanbul | (Sertifika tarihi: 03/2023)</p>
+                <ul>
+                    <li>Earth Akademi tarafından verilen programa katılıp, yapılan sınavı başarı ile geçerek kazanılan sertifika.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <h3>Bilgisayar Sistem Bakım ve Onarım ✅</h3>
+                <p class="meta">İSMEK - İstanbul | (Sertifika tarihi: 07/2022)</p>
+                <ul>
+                    <li>158 saatlik kursu başarıyla tamamlayarak kazanılan sertifika.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <h3>Yazılım Sektöründen Girişimciliğe Eğitimi ✅</h3>
+                <p class="meta">FMV Işık Üniversitesi - İstanbul | (Sertifika tarihi: 12/2020)</p>
+                <ul>
+                    <li>İnovasyon ve Girişimcilik Kulübü tarafından düzenlenen, Kodluyoruz'dan Gizem AŞICI ve Onur Kemal KOÇ ile gerçekleştirilen eğitim sertifikası.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <h3>İş Yeri Açma Belgesi (Bilgisayar Sistem Bakım ve Onarım) ✅</h3>
+                <p class="meta">Abdurrahman ve Nermin Bilimli M.T.A.L. - İstanbul | (Sertifika tarihi: 06/2019)</p>
+                <ul>
+                    <li>Avrupa Birliğinde geçerli sertifika ve iş yeri açma yetkinlik belgesi.</li>
+                </ul>
             </div>
         </div>
 
         <div class="section portfolio-section">
             <h2 class="section-title">Portfolyo & Çalışmalarım</h2>
-            <p style="color: #555; margin-bottom: 15px;">
+            <p style="color: #555; margin-bottom: 5px;">
                 Yazılım projelerimin (arayüz kodlamaları) yanı sıra Fotoğrafçılık Kulübü Kurucu Başkanı olarak yapılan çekimler ve teknik altyapı yönetimleri.
+            </p>
+            <p style="margin-bottom: 15px;">
+                🔗 <strong>Bireysel Portfolyo Websitesi:</strong> <a href="https://npe0ss.webmepage.com/mehmet-ulus" target="_blank" style="color: var(--primary-color); font-weight: bold; text-decoration: underline;">npe0ss.webmepage.com/mehmet-ulus</a>
             </p>
 
             <div class="photo-grid">
-
                 <div class="photo-card">
                     <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Telsiz Sinyal Haritası Arayüzü">
                     <textarea id="photoDescCode3" readonly>Telsiz Sinyal Haritası projesi; amatör telsizcilik bilgi birikimimle (TA1TRC) entegre harita API'leri ve ön yüz teknolojileri kullanılarak geliştirilmiş interaktif harita tasarımı.</textarea>
@@ -500,8 +595,19 @@
                     <img src="d86708f7-5734-4930-9aa2-9e43ad872a5e~1_cleaned.jpg" alt="Reji Masası Yönetimi">
                     <textarea id="photoDesc12" readonly>Canlı yayın ve konferans etkinlikleri sırasında ses mikseri ve stüdyo reji yönetimini tek başına koordine ederken.</textarea>
                 </div>
-
             </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Hobi ve İlgi Alanları</h2>
+            <ul style="list-style-type: none; margin-left: 0; font-size: 1.05em; color: #444;">
+                <li style="margin-bottom: 8px;">🔹 Arızalı elektronik parçaları ve cihazları kurtarmak ve kullanılabilir bir hâle getirmek.</li>
+                <li style="margin-bottom: 8px;">🔹 Profesyonel fotoğraf makinesi ile amatör sokak fotoğrafçılığı yapmak.</li>
+                <li style="margin-bottom: 8px;">🔹 Profesyonel video kamera ile amatör manzara video çekimleri yapmak.</li>
+                <li style="margin-bottom: 8px;">🔹 İGA'da Spotter'lık yapmak.</li>
+                <li style="margin-bottom: 8px;">🔹 Uluslararası Amatör Telsizcilik yapmak. Uluslararası geçerliliği olan HAREC belgesi ve Amatör Telsizcilik Lisansına (TA1TRC) sahip olmak.</li>
+                <li style="margin-bottom: 8px;">🔹 Güvenlik kamera sistemleri ve benzeri otomasyon sistemleri alanında donanım kurulumu yapmak.</li>
+            </ul>
         </div>
 
     </div>
